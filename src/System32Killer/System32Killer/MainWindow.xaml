@@ -5,14 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System32Killer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="System 32 Deletion Utility Version 1.0" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <Button Click="Event_StartButtonClicked">Start</Button>
+        <TextBlock Grid.Column="0" Grid.Row="7"
+            HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Hyperlink>About System32</Hyperlink>
+        </TextBlock>
+        <Button Grid.Row="7" Grid.Column="5" Margin="10 10 10 10" Click="Event_CancelButtonClicked">Cancel</Button>
+        <Button Grid.Row="7" Grid.Column="6" Margin="10 10 10 10" Click="Event_StartButtonClicked">Start</Button>
     </Grid>
 </Window>

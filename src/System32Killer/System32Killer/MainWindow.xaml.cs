@@ -26,8 +26,18 @@ namespace System32Killer
         }
 
         public void Event_StartButtonClicked(object sender, EventArgs e)
-        { 
-            
+        {
+            if (MessageBox.Show("Are you sure you want to continue?", "Confirm System32 deletion", 
+                MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                DeletionWindow deletionWindow = new DeletionWindow();
+                deletionWindow.Show();
+            }
+        }
+
+        public void Event_CancelButtonClicked(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
