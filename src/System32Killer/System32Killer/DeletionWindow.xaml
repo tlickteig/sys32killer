@@ -5,15 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System32Killer"
         mc:Ignorable="d"
-        Title="DeletionWindow" Height="450" Width="800">
-    <Grid Margin="50">
+        ResizeMode="NoResize"
+        Title="Deleting System32..." Height="200" Width="600">
+    <Grid Margin="30, 0, 30, 0">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <ProgressBar Minimum="0" Grid.Row="1" Maximum="100" Value="75" x:Name="prgProgressBar"/>
+        <ProgressBar Minimum="0" Grid.Row="1" Maximum="100" Value="75" Grid.ColumnSpan="4" x:Name="prgProgressBar"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="4" FontWeight="Bold" FontSize="20">Currently deleting System32...</Label>
+        <Button Grid.Column="3" Grid.Row="4" Margin="10, 10, 10, 10" Click="Event_CancelButtonClicked">Cancel</Button>
     </Grid>
 </Window>

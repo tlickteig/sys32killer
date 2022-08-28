@@ -18,12 +18,23 @@ using System.Windows.Shapes;
 
 namespace System32Killer
 {
+    public enum StopReason
+    { 
+        Unfinished,
+        Success,
+        Error,
+        Canceled
+    }
+
     /// <summary>
     /// Interaction logic for DeletionWindow.xaml
     /// </summary>
     public partial class DeletionWindow : Window
     {
         private const string DIRECTORY_NAME = "C:\\Windows\\System32\\";
+        private Thread? _runningThread;
+
+        public StopReason StopReason { get; set; } = StopReason.Unfinished;
 
         public DeletionWindow()
         {
@@ -33,51 +44,106 @@ namespace System32Killer
         protected override void OnContentRendered(EventArgs e)
         {
             base.OnContentRendered(e);
-            string[] files = Directory.GetFiles(DIRECTORY_NAME, "*", new EnumerationOptions()
-            { 
-                IgnoreInaccessible = true,
-                RecurseSubdirectories = true
-            });
-            prgProgressBar.Value = 0;
-
-            if (files?.Count() > 0)
+            try
             {
-                prgProgressBar.Maximum = files.Count();
-
-                new Thread(() =>
+                string[] files = Directory.GetFiles(DIRECTORY_NAME, "*", new EnumerationOptions()
                 {
-                    DeleteFiles(files);
-                    this.Dispatcher.Invoke(() =>
+                    IgnoreInaccessible = true,
+                    RecurseSubdirectories = true
+                });
+                prgProgressBar.Value = 0;
+
+                if (files?.Count() > 0)
+                {
+                    prgProgressBar.Maximum = files.Count();
+                    _runningThread = new Thread(() =>
                     {
-                        this.Close();
+                        try
+                        {
+                            DeleteFiles(files);
+                            if (StopReason == StopReason.Unfinished)
+                            {
+                                StopReason = StopReason.Success;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            LogToEventLog(ex);
+                            StopReason = StopReason.Error;
+                        }
+                        finally
+                        {
+                            this.Dispatcher.Invoke(() =>
+                            {
+                                this.Close();
+                            });
+                        }
                     });
-                }).Start();
+                    _runningThread.Start();
+                }
             }
+            catch (Exception ex2)
+            {
+                LogToEventLog(ex2);
+                StopReason = StopReason.Error;
+                this.Close();
+            }
+        }
+
+        private void Event_CancelButtonClicked(object sender, EventArgs e)
+        {
+            if (_runningThread is not null)
+            {
+                _runningThread.Interrupt();
+            }
+
+            StopReason = StopReason.Canceled;
+            this.Close();
         }
 
         private void DeleteFiles(string[] files)
         {
-            foreach (string file in files)
+            try
             {
-                try
-                {
-                    File.Delete(file);
-                }
-                catch (UnauthorizedAccessException ex)
+                foreach (string file in files)
                 {
                     try
                     {
-                        File.SetAttributes(file, FileAttributes.Normal);
                         File.Delete(file);
                     }
-                    catch (Exception e) { }
-                }
-                catch (IOException) { }
+                    catch (UnauthorizedAccessException ex)
+                    {
+                        try
+                        {
+                            File.SetAttributes(file, FileAttributes.Normal);
+                            File.Delete(file);
+                        }
+                        catch (Exception e) { }
+                    }
+                    catch (IOException) { }
 
-                this.Dispatcher.Invoke(() =>
-                {
-                    prgProgressBar.Value++;
-                });
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        prgProgressBar.Value++;
+                    });
+                }
+            }
+            catch (ThreadInterruptedException test)
+            {
+                // Fine to eat this as it gets thrown sometimes when the user cancels
+            }
+        }
+
+        private void LogToEventLog(Exception ex)
+        {
+            using (EventLog eventLog = new EventLog("Application"))
+            {
+                var message = ex.Message;
+                message += "\n";
+                message += ex.StackTrace;
+
+                eventLog.Source = "Application";
+                eventLog.WriteEntry(message, EventLogEntryType.Error);
             }
         }
     }
