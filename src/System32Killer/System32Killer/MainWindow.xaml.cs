@@ -31,7 +31,8 @@ namespace System32Killer
                 MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 DeletionWindow deletionWindow = new DeletionWindow();
-                deletionWindow.Show();
+                deletionWindow.ShowDialog();
+                MessageBox.Show("System32 deleted successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
