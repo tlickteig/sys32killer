@@ -1,0 +1,27 @@
+#dvHeader {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+#dvHeader a {
+    text-decoration: none;
+    color: black;
+}
+
+#h1LatestReleaseLink {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#h4EarlierReleasesLink {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#figCustomerQuote {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
