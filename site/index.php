@@ -1,6 +1,6 @@
 <html>
     <?php require("partial/head.php"); ?>
-    <?php require("partial/header.php") ?>
+    <?php require("partial/header.php"); ?>
     <body>
         <h2 id="h1LatestReleaseLink"><a href="#">Download latest release</a></h2>
         <br />
