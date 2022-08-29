@@ -1,4 +1,5 @@
-<footer>
+<footer id="dvFooter">
+    <br />
     <table>
         <tr>
             <td>
@@ -24,4 +25,5 @@
             <td>&#169;<?php echo date("Y");?>  Timothy L.</td>
         </tr>
     </table>
+    <br />
 </footer>

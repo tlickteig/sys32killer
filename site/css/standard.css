@@ -1,14 +1,96 @@
+@font-face {
+    font-family: Arimo-Bold;
+    src: url(../font/arimo/Arimo-Bold.ttf);
+}
+
+@font-face {
+    font-family: Arimo-Normal;
+    src: url(../font/arimo/Arimo-Regular.ttf);
+}
+
+@font-face {
+    font-family: Arimo-Italic;
+    src: url(../font/arimo/Arimo-Italic.ttf);
+}
+
+h1 {
+    font-family: Arimo-Bold;
+}
+
+h2 {
+    font-family: Arimo-Bold;
+}
+
+h4 {
+    font-family: Arimo-Bold;
+}
+
+p {
+    font-family: Arimo-Normal;
+}
+
+figure {
+    font-family: Arimo-Normal;
+}
+
+a {
+    font-family: Arimo-Normal;
+}
+
+td {
+    font-family: Arimo-Normal;
+}
+
+#bdyMainWindow {
+    border: 1px solid black;
+    width: 1000px;
+    margin: 1em auto;
+    text-align: center;
+    height: fit-content;
+    background-color: aliceblue;
+}
+
 #dvHeader {
     width: auto;
     margin: 0 auto;
     text-align: center;
+    padding: .125em;
+    background-color: lightblue;
 }
+
+#dvFooter {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: lightblue;
+}
+
+#dvFooter table {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
 #dvHeader a {
     text-decoration: none;
     color: black;
 }
 
+#dvMainWindow {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+    background-color: ghostwhite;
+}
+
 #h1LatestReleaseLink {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#pDescription {
     width: auto;
     margin: 0 auto;
     text-align: center;
@@ -21,7 +103,16 @@
 }
 
 #figCustomerQuote {
-    width: auto;
+    width: fit-content;
     margin: 0 auto;
     text-align: center;
+}
+
+#blqCustomerQuote {
+    font-family: Arimo-Italic;
+}
+
+#fgcQuoteAuthor {
+    font-family: Arimo-Normal;
+    text-align: left;
 }
