@@ -42,12 +42,15 @@ td {
 }
 
 #bdyMainWindow {
-    border: 1px solid black;
     width: 1000px;
     margin: 1em auto;
     text-align: center;
     height: fit-content;
     background-color: aliceblue;
+}
+
+.bg-primary {
+    background-color: lightblue !important;
 }
 
 #dvHeader {
@@ -56,6 +59,7 @@ td {
     text-align: center;
     padding: .125em;
     background-color: lightblue;
+    border-radius: 5px;
 }
 
 #dvFooter {
@@ -63,6 +67,11 @@ td {
     margin: 0 auto;
     text-align: center;
     background-color: lightblue;
+}
+
+#dvFooter p {
+    padding: .5em;
+    border-radius: 5px;
 }
 
 #dvFooter table {
@@ -74,6 +83,7 @@ td {
 #dvHeader a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 #dvMainWindow {
@@ -81,7 +91,6 @@ td {
     margin: 0 auto;
     text-align: center;
     padding: 1em;
-    background-color: ghostwhite;
 }
 
 #h1LatestReleaseLink {
@@ -94,6 +103,7 @@ td {
     width: auto;
     margin: 0 auto;
     text-align: center;
+    padding: 0em 3em 0em 3em;
 }
 
 #h4EarlierReleasesLink {

@@ -1,29 +1,3 @@
-<footer id="dvFooter">
-    <br />
-    <table>
-        <tr>
-            <td>
-                <a href="index.php">
-                    Home
-                </a>
-            </td>
-            <td>
-                <a href="about.php">
-                    About
-                </a>
-            </td>
-            <td>
-                <a href="https://github.com/tlickteig/sys32killer">
-                    GitHub
-                </a>
-            </td>
-            <td>
-                <a href="https://github.com/tlickteig/sys32killer/blob/main/LICENSE">
-                    License
-                </a>
-            </td>
-            <td>&#169;<?php echo date("Y");?>  Timothy L.</td>
-        </tr>
-    </table>
-    <br />
+<footer id="dvFooter" class="bg-light text-center">
+    <p class="bg-primary">&#169;<?php echo date("Y");?>  Timothy L. <a href="https://github.com/tlickteig/sys32killer/blob/main/LICENSE">License</a><p>
 </footer>

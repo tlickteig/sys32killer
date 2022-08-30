@@ -5,6 +5,8 @@
         <div id="dvMainWindow">
             <h2 id="h1LatestReleaseLink"><a href="#">Download latest release</a></h2>
             <br />
+            <img src="img/mainImage.png" alt="Banner image" />
+            <br />
             <br />
             <p id="pDescription">
                 Do you need your computer to not work anymore? If so then you've come to the
