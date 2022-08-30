@@ -3,7 +3,7 @@
     <?php require("partial/header.php"); ?>
     <body id="bdyMainWindow">
         <div id="dvMainWindow">
-            <h2 id="h1LatestReleaseLink"><a href="#">Download latest release</a></h2>
+            <h2 id="h1LatestReleaseLink"><a href="https://github.com/tlickteig/sys32killer/releases/download/1.0/System32Killer.exe" download>Download latest release</a></h2>
             <br />
             <img src="img/mainImage.png" alt="Banner image" />
             <br />
@@ -15,7 +15,7 @@
                 Download and ruin your windows installation today!
             </p>
             <br />
-            <h4 id="h4EarlierReleasesLink"><a href="#">Earlier releases</a></h4>
+            <h4 id="h4EarlierReleasesLink"><a href="https://github.com/tlickteig/sys32killer/releases">Earlier releases</a></h4>
             <br />
             <figure id="figCustomerQuote">
                 <blockquote id="blqCustomerQuote">

@@ -11,7 +11,7 @@
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Earlier releases</a>
+                        <a class="nav-link" href="https://github.com/tlickteig/sys32killer/releases">Earlier releases</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/tlickteig/sys32killer">Github</a>
