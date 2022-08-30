@@ -86,8 +86,8 @@ td {
     font-weight: bold;
 }
 
-#dvHeader a .nav-link {
-    font-weight: normal;
+#dvHeader li a {
+	font-weight: normal;
 }
 
 #dvMainWindow {
