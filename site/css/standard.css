@@ -86,6 +86,10 @@ td {
     font-weight: bold;
 }
 
+#dvHeader a .nav-link {
+    font-weight: normal;
+}
+
 #dvMainWindow {
     width: auto;
     margin: 0 auto;
