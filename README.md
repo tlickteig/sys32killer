@@ -2,7 +2,7 @@
 ## The fastest and easiest way to delete System 32!
 
 <p align="center">
-![banner image](https://github.com/tlickteig/sys32killer/blob/main/site/img/mainImage.png?raw=true)
+  <img src="https://github.com/tlickteig/sys32killer/blob/main/site/img/mainImage.png?raw=true" alt="banner image" />
 </p>
 
 [www.system32killer.com](https://system32killer.com)
