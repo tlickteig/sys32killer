@@ -3,7 +3,7 @@
     <?php require("partial/header.php"); ?>
     <body id="bdyMainWindow">
         <div id="dvMainWindow">
-            <h2 id="h1LatestReleaseLink"><a href="https://github.com/tlickteig/sys32killer/releases/download/1.0/System32Killer.exe" download>Download latest release</a></h2>
+            <h2 id="h1LatestReleaseLink"><a href="https://github.com/tlickteig/sys32killer/releases/latest/download/System32Killer.exe" download>Download latest release</a></h2>
             <br />
             <img src="img/mainImage.png" alt="Banner image" />
             <br />
@@ -19,7 +19,7 @@
             <br />
             <figure id="figCustomerQuote">
                 <blockquote id="blqCustomerQuote">
-                    Roses are red, my screen is blue. Somebody help, I deleted system 32!
+                    Roses are red, my screen is blue, somebody help, I deleted system 32!
                 </blockqute>
                 <p></p>
                 <figcaption id="fgcQuoteAuthor">- Satisfied customer</figcaption>

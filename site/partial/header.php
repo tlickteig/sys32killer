@@ -8,7 +8,7 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="https://github.com/tlickteig/sys32killer/blob/main/README.md">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/tlickteig/sys32killer/releases">Earlier releases</a>
