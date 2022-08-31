@@ -1,4 +1,4 @@
-# The System 32 Killer
+<h1 align="center">The System 32 Killer</h1>
 ## The fastest and easiest way to delete System 32!
 
 <p align="center">
