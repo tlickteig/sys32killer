@@ -1,5 +1,5 @@
 # The System 32 Killer
-## The fastest and easiest way to delete system 32
+## The fastest and easiest way to delete System 32!
 [www.system32killer.com](https://system32killer.com)
 
 ## About
