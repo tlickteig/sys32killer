@@ -1,5 +1,5 @@
 <h1 align="center">The System 32 Killer</h1>
-## The fastest and easiest way to delete System 32!
+<h2 align="center">The fastest and easiest way to delete System 32!</h2>
 
 <p align="center">
   <img src="https://github.com/tlickteig/sys32killer/blob/main/site/img/mainImage.png?raw=true" alt="banner image" />
