@@ -1,5 +1,8 @@
 # The System 32 Killer
 ## The fastest and easiest way to delete System 32!
+
+![banner image](https://github.com/tlickteig/sys32killer/blob/main/site/img/mainImage.png?raw=true)
+
 [www.system32killer.com](https://system32killer.com)
 
 ## About
